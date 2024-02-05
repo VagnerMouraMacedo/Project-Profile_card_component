@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url(fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+:root {
+  --dark_cyan: hsl(185, 75%, 39%);
+  --very_dark_desaturated_blue: hsl(229, 23%, 23%);
+  --dark_grayish_blue: hsl(227, 10%, 46%);
+  --dark_gray: hsl(0, 0%, 59%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.bg {
+  position: relative;
+  overflow: hidden;
+  font-family: "Kumbh Sans";
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark_cyan);
+  overflow: hidden;
+}
+body img.bg-top::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -45%;
+  left: -30%;
+  transform: rotate();
+  background: url(images/bg-pattern-top.svg) no-repeat bottom;
+  background-size: 900px;
+}
+.box-main {
+  width: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.img-bg-hdr {
+  background: url(images/bg-pattern-card.svg);
+  width: 100%;
+  height: 120px;
+}
+img.avatar {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  border: 5px solid white;
+}
+h1.name {
+  display: flex;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 70px;
+
+  gap: 10px;
+}
+h1.name span {
+  color: gray;
+  font-weight: 600;
+}
+p.city {
+  color: var(--dark_gray);
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px 0 0 0;
+  border-top: 0.1px solid hsla(0, 0%, 59%, 0.192);
+  padding: 20px 0;
+}
+.info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+}
+.info-content .qty {
+  font-weight: 800;
+}
+.info-content .desc {
+  font-size: 0.6em;
+  color: var(--dark_gray);
+  letter-spacing: 2px;
+}
